@@ -1,0 +1,20 @@
+﻿<Window x:Class="PZ_2_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PZ_2_WPF"
+        mc:Ignorable="d"
+        Background="LightGray"
+        Title="Нахождение расстояния между двумя точками с заданными координатами" Height="450" Width="800">
+    <Grid Cursor="Hand">
+        <Label x:Name = "label1" Content="Введите Х1: " HorizontalAlignment="Left" Height="25" Margin="210,50,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name = "label2" Content="Введите Х2: " HorizontalAlignment="Left" Height="25" Margin="210,80,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name = "label3" Content="Расстояние: " HorizontalAlignment="Left" Height="25" Margin="210,300,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name = "txtBox1" HorizontalAlignment="Left" Height="25" Margin="298,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="343" RenderTransformOrigin="0.501,0.722"/>
+        <TextBox x:Name = "txtBox2" HorizontalAlignment="Left" Height="25" Margin="298,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="343" RenderTransformOrigin="0.501,0.722"/>
+        <TextBox x:Name = "txtBox3" HorizontalAlignment="Left" Height="25" Margin="298,305,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="343" RenderTransformOrigin="0.501,0.722"/>
+        <Button x:Name ="btn1" Content="Рассчитать!" HorizontalAlignment="Left" Height="63" Margin="63,161,0,0" VerticalAlignment="Top" Width="680" Cursor="Hand" FontSize="36" Background="Green" Click="btn1_Click"/>
+
+    </Grid>
+</Window>
