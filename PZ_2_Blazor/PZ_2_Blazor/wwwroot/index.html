@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Нахождение расстояния между двумя точками с заданными координатами</title>
+    <base href="/" />
+    <link href="css/app.css" rel="stylesheet" />
+
+</head>
+<body style="background-color: lightgray; width: 100%; padding:20px; display: flex; justify-content:center; flex-direction:column">
+    <style>
+        .container {
+            margin: 20px;
+            width: 320px;
+        }
+    </style>
+
+    <div class="continer">
+        Введите Х1: <input id="txtBox1" type="text" />
+    </div>
+    <div class="continer">
+        Введите Х2: <input id="txtBox2" type="text"/>
+    </div>
+    <div class="continer">
+        <button type="button" style="background-color:green" @onclick="button1_Click">Вычислить!</button>
+    </div>
+    <div class="continer">
+        Расстояние: <input id="txtBox3" type="text" />
+    </div>
+
+</body>
+
+</html>

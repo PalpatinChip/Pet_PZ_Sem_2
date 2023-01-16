@@ -1,0 +1,46 @@
+﻿@page "/"
+
+<PageTitle>Нахождение расстояния между двумя точками с заданными координатами</PageTitle>
+<body style="background-color: lightgray; width: 100%; padding:20px; display: flex; justify-content:center; flex-direction:column">
+    <style>
+        .container {
+            margin: 20px;
+            width: 320px;
+        }
+    </style>
+
+    <div class="continer">
+        Введите Х1: <input id="txtBox1" type="text" />
+    </div>
+    <div class="continer">
+        Введите Х2: <input id="txtBox2" type="text" />
+    </div>
+    <div class="continer">
+        <button type="button" style="background-color:green" @onclick="button1_Click">Вычислить!</button>
+    </div>
+    <div class="continer">
+        Расстояние: <input id="txtBox3" type="text" />
+    </div>
+</body>
+
+    @code {
+    private void button1_Click(object sender, EventArgs e)
+    {
+    int x1 = 0;
+    int x2 = 0;
+    try
+    {
+    x1 = Convert.ToInt32(this.textBox1.Text);
+    x2 = Convert.ToInt32(this.textBox2.Text);
+    }
+    catch (FormatException)
+    {
+    MessageBox.Show("ОШИБКА! ВВЕДЕНО ИЛИ НЕКОРЕКТНЫЕ ЗНАЧЕНИЯ, ИЛИ НЕ ВВЕДЕНЫ ВОВСЕ!");
+    return;
+    }
+    int s = Math.Abs(x1 - x2);
+
+    this.textBox3.Text = Convert.ToString(s);
+
+    }
+    }
