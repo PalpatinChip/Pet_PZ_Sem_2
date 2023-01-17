@@ -1,0 +1,52 @@
+﻿@page "/PZ_2"
+
+<h1>ПЗ_2</h1>
+<div>
+    <ul>
+        <li>Введите Х1: <input id="Text1" type="text" @bind-value="cin1" /></li>
+        <li>Введите Х2: <input id="Text2" type="text" @bind-value="cin2" /></li>
+    </ul>
+    <input id="Button1" type="button" value="Выполнить" @onclick="button1_Click"/>
+    <li>Ответ: <input id="Text2" type="text" readonly @bind-value="cout"/></li>
+</div>
+
+
+@code {
+    private string cin1, cin2, cout;
+
+    private void button1_Click()
+    {
+
+        int x1 = 0;
+        int x2 = 0;
+        try
+        {
+            x1 = Convert.ToInt32(cin1);
+            x2 = Convert.ToInt32(cin2);
+        }
+        catch (FormatException)
+        {
+            showError = true;
+            return;
+        }
+        int s = Math.Abs(x1 - x2);
+
+        cout = Convert.ToString(s);
+
+    }
+    private bool showError;
+    private void Error_Canceler()
+    {
+        showError = false;
+    }
+
+}
+
+@if (showError)
+{
+<div role="dialog">
+    <h5>Ошибка!</h5>
+    <h6>Тут текст ошибки!</h6>
+    <input id="Button2" type="button" value="Отмена" @onclick="Error_Canceler"/>
+</div>
+}
